@@ -1,5 +1,7 @@
 # nane-chat
 
+Test task on vue. Forntend for https://github.com/tada-team/nane
+
 ## Project setup
 ```
 npm install
