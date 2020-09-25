@@ -3,9 +3,7 @@
     <div
       class="chat"
       v-chat-scroll="{
-        always: scrollBottom,
-        smooth: true,
-        notSmoothOnInit: true
+        always: scrollBottom
       }"
     >
       <ul>
