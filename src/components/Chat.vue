@@ -52,7 +52,7 @@ export default {
   },
   computed: {
     messages () {
-      return this.$store.state.messageHistory
+      return this.$store.getters.messageHistory
     },
     maxMessageLength () {
       return this.$store.getters.maxMessageLength || 10500
