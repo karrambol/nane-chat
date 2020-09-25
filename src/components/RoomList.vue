@@ -7,13 +7,14 @@
         class="room-list__input"
         v-model="newRoomName"
         :rules="[rules.maxRoom, rules.exists]"
+        @keydown.enter="createRoom"
       >
         <v-btn
           slot="append"
           small
           outlined
           class="room-list__button"
-          @click="createRoom()"
+          @click="createRoom"
           >Create</v-btn
         >
       </v-text-field>
@@ -44,12 +45,13 @@
         class="room-list__input"
         v-model="username"
         :rules="[rules.maxUsername]"
+        @keydown.enter="setUsername"
         ><v-btn
           small
           slot="append"
           outlined
           class="room-list__button"
-          @click="setUsername()"
+          @click="setUsername"
           >Change</v-btn
         ></v-text-field
       >

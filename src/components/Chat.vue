@@ -22,6 +22,7 @@
         v-model="message"
         placeholder="message"
         :rules="[rules.max]"
+        @keydown.enter="send"
       ></v-text-field>
       <v-btn color="primary" class="chat-form__button" @click="send"
         >Send</v-btn
