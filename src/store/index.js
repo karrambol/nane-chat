@@ -15,8 +15,7 @@ export default new Vuex.Store({
     roomList: [],
     currentRoom: undefined,
     messageHistory: undefined,
-    socket: undefined,
-    messageText: ''
+    socket: undefined
   },
   getters: {
     roomList (state) {
