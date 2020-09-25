@@ -103,10 +103,12 @@ export default {
     changeRoom (name) {
       this.$store.dispatch('changeRoom', name)
       this.$emit('drawer-close')
+      this.$emit('relocate')
     },
     createRoom () {
       if (!this.newRoomNameInvalid) {
         this.$store.dispatch('createRoom', this.newRoomName)
+        this.$emit('relocate')
       }
     },
     setUsername () {

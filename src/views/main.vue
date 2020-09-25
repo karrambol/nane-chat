@@ -6,14 +6,14 @@
       v-model="drawerIsOpen"
       app
     >
-      <RoomList @drawer-close="drawerUndefined()" />
+      <RoomList @drawer-close="drawerUndefined()" @relocate="scrollChat" />
     </v-navigation-drawer>
     <v-app-bar class="top-bar" app>
       <button @click="drawerToggle()"><v-icon>mdi-menu</v-icon></button>
       <h1>{{ currentRoom }}</h1>
     </v-app-bar>
     <v-main>
-      <Chat />
+      <Chat scrollBottom />
     </v-main>
   </v-app>
 </template>
@@ -27,6 +27,7 @@ export default {
   },
   data () {
     return {
+      scrollBottom: false,
       drawerIsOpen: undefined
     }
   },
@@ -39,6 +40,12 @@ export default {
     }
   },
   methods: {
+    scrollChat () {
+      this.scrollBottom = true
+      setInterval(() => {
+        this.scrollBottom = false
+      }, 500)
+    },
     drawerToggle () {
       this.drawerIsOpen = !this.drawerIsOpen
     },

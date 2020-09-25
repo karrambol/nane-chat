@@ -1,6 +1,13 @@
 <template>
   <div class="wrapper">
-    <div class="chat" v-chat-scroll="{ always: false, smooth: true }">
+    <div
+      class="chat"
+      v-chat-scroll="{
+        always: scrollBottom,
+        smooth: true,
+        notSmoothOnInit: true
+      }"
+    >
       <ul>
         <Message
           v-for="message in messages"
@@ -29,6 +36,9 @@ import Message from '@/components/Message.vue'
 export default {
   components: {
     Message
+  },
+  props: {
+    scrollBottom: { type: Boolean, default: false }
   },
   data () {
     return {
