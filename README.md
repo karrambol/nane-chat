@@ -7,7 +7,7 @@ Test task on vue. Frontend for https://github.com/tada-team/nane
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run project in developmend mode with live-reload
 ```
 npm run serve
 ```
