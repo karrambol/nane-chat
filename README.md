@@ -1,6 +1,6 @@
 # nane-chat
 
-Test task on vue. Forntend for https://github.com/tada-team/nane
+Test task on vue. Frontend for https://github.com/tada-team/nane
 
 ## Project setup
 ```
@@ -15,14 +15,4 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
